@@ -20,8 +20,8 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'doctor'], function () use ($router) {
     $router->post('add','DoctorController@add');
     $router->post('edit','DoctorController@edit');
-    $router->get('delete/{id}','DoctorController@delete');
-    $router->get('active/{id}','DoctorController@active');
+    $router->post('delete/{id}','DoctorController@delete');
+    $router->post('active/{id}','DoctorController@active');
     $router->get('detail/{id}','DoctorController@detail');
     $router->post('list/','DoctorController@list');
 });
